@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #7eb5e6, #72e6ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+  color: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+}
+
+.app h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 12px 15px;
+  width: 65%;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.search-box input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.search-box button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 30px;
+  background: #ff9800;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #ff7b00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  animation: fadeIn 0.6s ease-in-out;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.weather-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.weather-card h3 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .app h1 {
+    font-size: 2rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
